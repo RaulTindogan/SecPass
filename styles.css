@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+}
+
+input {
+    cursor: pointer;
+}
+
+.container {
+    width: 300px;
+    background-color: #044997;
+    padding: 50px 20px;
+    border-radius: 20px;
+    color: yellow;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.generated-password {
+    text-align: center;
+    padding: 20px;
+    border: yellow 1px solid;
+    margin: 20px 0px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 44);
+    color: white;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+}
+
+#passwordRange, #passwordNumber {
+    width: 100%;
+}
+
+#submit {
+    width: 100%;
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    border: 1px yellow solid;
+    background-color: transparent;
+    color: yellow;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    grid-column: 1/3;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#submit::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+}
+
+#submit:hover {
+    color: blue;
+}
+
+#submit:hover:before {
+    background-color: rgb(14, 198, 14);
+    width: 100%;
+}
+
+input[type="checkbox"] {display: none; }
+
+.check-span {
+    width: 70px;
+    height: 30px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+    padding: 0 2px;
+    transition: all .5s ease-in-out;
+}
+
+.check-span::before {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 90%;
+    left: 3px;
+    border-radius: 50%;
+    background-color: rgb(194, 194, 194);
+    transition: all .5s ease-in-out;
+}
+
+#includeUppercase:checked + .check-span{
+    background-color: black;
+}
+
+#includeUppercase:checked + .check-span::before {
+    transform: translateX(100%);
+    background-color: yellow;
+}
+
+#includeNumbers:checked + .check-span{
+    background-color: black;
+}
+
+#includeNumbers:checked + .check-span::before {
+    transform: translateX(100%);
+    background-color: yellow;
+}
+
+#includeSymbols:checked + .check-span{
+    background-color: black;
+}
+
+#includeSymbols:checked + .check-span::before {
+    transform: translateX(100%);
+    background-color: yellow;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 500px;
+        background-color: #044997;
+        padding: 50px;
+        border-radius: 20px;
+        color: yellow;
+    }
+}
+
+
+
+
+
+
+
+
+
+

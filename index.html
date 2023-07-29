@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="SecPass.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="generated-password" id="generated-password">Password</div>
+        <form class="form" id="form">
+            <p>Number of Characters</p>
+            <label for="passwordCount">
+                <input type="range" id="passwordRange" min="8" max="30" value="8">
+                <input type="number" id="passwordNumber" min="8" max="30" value="8">
+            </label>  
+
+            <p>Include Uppercase</p>
+            <label for="includeUppercase">
+                <input type="checkbox" name="includeUppercase" id="includeUppercase">
+                <span class="check-span"></span>
+            </label>   
+
+            <p>Include Numbers</p>
+                <label for="includeNumbers">
+                <input type="checkbox" name="includeNumbers" id="includeNumbers">
+                <span class="check-span"></span>
+            </label>   
+            
+            <p>Include Symbols</p>
+            <label for="includeSymbols">
+                <input type="checkbox" name="includeSymbols" id="includeSymbols">
+                <span class="check-span"></span>
+            </label>    
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
